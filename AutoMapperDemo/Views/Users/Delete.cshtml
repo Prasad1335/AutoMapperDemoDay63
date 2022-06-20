@@ -1,0 +1,36 @@
+﻿@using AutoMapperDemo.Models.ViewModel
+@model UserViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Model.FirstName</dt>
+        <dd class="col-sm-10">@Model.FirstName</dd>
+        <dt class="col-sm-2">@Model.LastName</dt>
+        <dd class="col-sm-10">@Model.LastName</dd>
+        <dt class="col-sm-2">@Model.DateOfBirth</dt>
+        <dd class="col-sm-10">@Model.DateOfBirth</dd>
+        <dt class="col-sm-2">@Model.Address</dt>
+        <dd class="col-sm-10">@Model.Address</dd>
+        <dt class="col-sm-2">@Model.Gender</dt>
+        <dd class="col-sm-10">@Model.Gender</dd>
+        <dt class="col-sm-2">@Model.MobileNumber</dt>
+        <dd class="col-sm-10">@Model.MobileNumber</dd>
+        <dt class="col-sm-2">@Model.Email</dt>
+        <dd class="col-sm-10">@Model.Email</dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
